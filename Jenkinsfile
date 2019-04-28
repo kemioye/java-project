@@ -10,6 +10,6 @@ node('linux'){
         sh "ant -f build.xml -v"
     }
     stage('Deploy'){
-        sh 'aws s3 cp /workspace/java-pipeline/* s3://ustseis665-1-kemi'
+        sh 'aws s3 cp /workspace/java-pipeline/dist/* s3://ustseis665-1-kemi'
     }
 }
